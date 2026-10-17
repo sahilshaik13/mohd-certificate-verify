@@ -1,6 +1,6 @@
 # Certificate verification capture
 
-Standalone page: `Mohd-Abdul-Rahman-2026-0jdyhs6829-certificate-verification.html` (Name: Mohd Abdul Rahman, Code: 2026-0jdyhs6829).
+Standalone page: `Mohd-Abdul-Rahman-2026-0jdyhs6829-certificate-verification.html` (Name: Mohd Abdul Rahman, Code: 2026-0jdyhs6829). Put **this HTML file URL** in the QR code (see `mohd-abdul-rahman-certificate.json` → `verifyUrl`), not the JSON body.
 
 Original template captured from: https://lmsapi.eduskills.academy/verify/2026-0FA664D274
 

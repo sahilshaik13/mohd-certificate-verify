@@ -6,7 +6,8 @@
     "dev": "next dev -p 43124",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "build-offline-qr": "node ../certificate-capture/build-offline-qr.mjs"
   },
   "dependencies": {
     "next": "16.4.2",
