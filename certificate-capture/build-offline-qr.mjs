@@ -3,12 +3,16 @@
  * Builds a QR code with the full certificate page embedded (data: URL).
  * No web hosting required — scanning opens the HTML in the phone browser.
  */
-import QRCode from "qrcode";
+import { createRequire } from "node:module";
 import { writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
+const require = createRequire(
+  path.join(dir, "..", "verify-portal", "package.json"),
+);
+const QRCode = require("qrcode");
 
 const certificate = {
   certificateCode: "2026-0jdyhs6829",
