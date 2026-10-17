@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Creates repo under your `gh auth` user and deploys docs/ to GitHub Pages.
 set -euo pipefail
 
 REPO="${GITHUB_REPO:-mohd-certificate-verify}"
