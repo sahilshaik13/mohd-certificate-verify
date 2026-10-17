@@ -26,15 +26,20 @@ echo "Using GitHub account: $OWNER"
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
+GITHUB_REMOTE="https://github.com/$OWNER/$REPO.git"
+
 if gh repo view "$OWNER/$REPO" >/dev/null 2>&1; then
   echo "Repo $OWNER/$REPO already exists."
-  if ! git remote get-url github >/dev/null 2>&1; then
-    git remote add github "https://github.com/$OWNER/$REPO.git"
-  fi
 else
-  gh repo create "$REPO" --private --source=. --remote=github --push
+  if git remote get-url github >/dev/null 2>&1; then
+    git remote set-url github "$GITHUB_REMOTE"
+    gh repo create "$REPO" --private --push --remote=github
+  else
+    gh repo create "$REPO" --private --source=. --remote=github --push
+  fi
 fi
 
+git remote set-url github "$GITHUB_REMOTE" 2>/dev/null || git remote add github "$GITHUB_REMOTE"
 git push github "$BRANCH" 2>/dev/null || git push -u github "$BRANCH"
 
 PAGES_URL="https://${OWNER}.github.io/${REPO}"
