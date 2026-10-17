@@ -1,12 +1,14 @@
 # Private GitHub repo + QR (one-time)
 
+Uses the GitHub account from `gh auth login` (e.g. **sahilshaik13**).
+
 Your QR points to:
 
-**https://shaiksahil.github.io/mohd-certificate-verify**
+**https://sahilshaik13.github.io/mohd-certificate-verify**
 
-(Private repo is fine — the **Pages site is still public**, so anyone can scan the QR.)
+(Private repo is fine — the **Pages site is still public**.)
 
-## Steps (on your machine)
+## Steps
 
 ```bash
 gh auth login
@@ -14,15 +16,19 @@ cd /path/to/this/project
 ./scripts/setup-github-private.sh
 ```
 
-That creates **`shaiksahil/mohd-certificate-verify`** (private), pushes `main`, and rebuilds:
+Optional override:
 
-`certificate-capture/mohd-abdul-rahman-certificate-qr.png`
+```bash
+GITHUB_OWNER=sahilshaik13 GITHUB_REPO=mohd-certificate-verify ./scripts/setup-github-private.sh
+```
+
+Do **not** set `GITHUB_OWNER` to another user unless you have permission to create repos there.
 
 If Pages is not live yet:
 
-1. Open https://github.com/shaiksahil/mohd-certificate-verify/settings/pages  
-2. **Build and deployment → Source: GitHub Actions**  
-3. Re-run the **GitHub Pages** workflow under Actions.
+1. `https://github.com/sahilshaik13/mohd-certificate-verify/settings/pages`
+2. **Build and deployment → Source: GitHub Actions**
+3. Re-run **GitHub Pages** under Actions.
 
 ## QR file
 
