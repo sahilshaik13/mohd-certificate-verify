@@ -30,7 +30,7 @@ function resolvePublicUrl(config) {
   const repo = config.githubRepo?.trim();
   const branch = config.githubBranch?.trim() || "main";
   if (owner && repo) {
-    return `https://cdn.jsdelivr.net/gh/${owner}/${repo}@${branch}/docs/index.html`;
+    return `https://${owner}.github.io/${repo}`;
   }
   throw new Error(
     "Set publicUrl or githubOwner/githubRepo in public-url.config.json",
