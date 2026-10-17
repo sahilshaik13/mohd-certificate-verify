@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "certificateCode": "2026-0jdyhs6829",
+  "status": "verified",
+  "verifyUrl": "https://your-domain.example/verify/2026-0jdyhs6829",
+  "page": {
+    "title": "Certificate Verification",
+    "headline": "Your Certificate has been verified successfully",
+    "logo": {
+      "src": "/academy_logo.png",
+      "alt": "EduSkills Academy"
+    },
+    "holder": {
+      "name": "Mohd Abdul Rahman"
+    },
+    "domain": "Java Full Stack",
+    "issueDate": "2026-03-03",
+    "theme": {
+      "pageBackground": "#f4f4f4",
+      "cardBackground": "#ffffff",
+      "headlineColor": "#004ae9",
+      "verifiedIconBackground": "#008000"
+    }
+  }
+}
