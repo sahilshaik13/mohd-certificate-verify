@@ -1,13 +1,12 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "certificateCode": "2026-0jdyhs6829",
   "status": "verified",
-  "hosting": "none",
+  "verifyUrl": "https://cdn.jsdelivr.net/gh/shaiksahil/tmp-a19f200a2063cc24@main/docs/index.html",
   "qr": {
-    "type": "data-uri",
-    "description": "Scan the PNG QR; payload is an embedded HTML page (not a hosted link).",
-    "payloadByteLength": 1823,
-    "imageFile": "mohd-abdul-rahman-certificate-qr.png"
+    "type": "url",
+    "imageFile": "mohd-abdul-rahman-certificate-qr.png",
+    "note": "Phone cameras open https links only; data: URIs are not supported."
   },
   "page": {
     "title": "Certificate Verification",
@@ -18,5 +17,8 @@
     "domain": "Java Full Stack",
     "issueDate": "2026-03-03"
   },
-  "offlineHtmlFile": "mohd-abdul-rahman-offline.html"
+  "localHtmlFiles": [
+    "Mohd-Abdul-Rahman-2026-0jdyhs6829-certificate-verification.html",
+    "mohd-abdul-rahman-offline.html"
+  ]
 }
