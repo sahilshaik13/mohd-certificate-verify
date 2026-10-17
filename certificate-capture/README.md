@@ -1,6 +1,8 @@
 # Certificate verification capture
 
-Source URL: https://lmsapi.eduskills.academy/verify/2026-0FA664D274
+Standalone page: `Mohd-Abdul-Rahman-2026-0jdyhs6829-certificate-verification.html` (Name: Mohd Abdul Rahman, Code: 2026-0jdyhs6829).
+
+Original template captured from: https://lmsapi.eduskills.academy/verify/2026-0FA664D274
 
 Captured with [REA](https://github.com/morluto/rea) (`inspect-web-page`, `capture-web-screenshot`) via Chrome DevTools Protocol.
 
