@@ -19,6 +19,8 @@ export type CertificatePage = {
 export type CertificateRecord = {
   schemaVersion: number;
   certificateCode: string;
+  /** Filename under `public/` (static HTML). */
+  htmlFile: string;
   status: string;
   page: CertificatePage;
   source?: Record<string, string>;

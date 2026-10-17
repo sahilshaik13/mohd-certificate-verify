@@ -1,10 +1,10 @@
 import { getCertificate } from "@/lib/certificates";
-import { verifyPublicUrl } from "@/lib/site-url";
+import { certificateHtmlPublicUrl } from "@/lib/site-url";
 import { NextResponse } from "next/server";
 
 type Props = { params: Promise<{ code: string }> };
 
-/** Full certificate webpage as JSON. QR codes should use `verifyUrl`, not this payload. */
+/** Certificate webpage as JSON. `verifyUrl` is the static HTML file URL for QR codes. */
 export async function GET(_request: Request, { params }: Props) {
   const { code } = await params;
   const record = await getCertificate(code);
@@ -12,7 +12,7 @@ export async function GET(_request: Request, { params }: Props) {
     return NextResponse.json({ error: "not_found" }, { status: 404 });
   }
 
-  const verifyUrl = await verifyPublicUrl(code);
+  const verifyUrl = certificateHtmlPublicUrl(record);
 
   return NextResponse.json({
     ...record,

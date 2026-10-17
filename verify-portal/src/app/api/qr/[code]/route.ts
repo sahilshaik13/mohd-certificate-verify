@@ -1,11 +1,11 @@
 import { getCertificate } from "@/lib/certificates";
-import { verifyPublicUrl } from "@/lib/site-url";
+import { certificateHtmlPublicUrl } from "@/lib/site-url";
 import QRCode from "qrcode";
 import { NextResponse } from "next/server";
 
 type Props = { params: Promise<{ code: string }> };
 
-/** PNG QR code whose payload is only the public verify URL (not JSON). */
+/** PNG QR code encodes the static HTML file URL only (not JSON, not /verify/…). */
 export async function GET(_request: Request, { params }: Props) {
   const { code } = await params;
   const record = await getCertificate(code);
@@ -13,7 +13,7 @@ export async function GET(_request: Request, { params }: Props) {
     return NextResponse.json({ error: "not_found" }, { status: 404 });
   }
 
-  const url = await verifyPublicUrl(code);
+  const url = certificateHtmlPublicUrl(record);
   const png = await QRCode.toBuffer(url, {
     type: "png",
     width: 512,

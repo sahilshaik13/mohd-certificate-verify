@@ -1,8 +1,9 @@
 {
   "schemaVersion": 1,
   "certificateCode": "2026-0jdyhs6829",
+  "htmlFile": "Mohd-Abdul-Rahman-2026-0jdyhs6829-certificate-verification.html",
   "status": "verified",
-  "verifyUrl": "https://your-domain.example/verify/2026-0jdyhs6829",
+  "verifyUrl": "https://your-domain.example/Mohd-Abdul-Rahman-2026-0jdyhs6829-certificate-verification.html",
   "page": {
     "title": "Certificate Verification",
     "headline": "Your Certificate has been verified successfully",

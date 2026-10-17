@@ -1,19 +1,29 @@
 # Certificate verify portal
 
-Store the full certificate page in JSON, serve it at a short URL, and put **only that URL** in the QR code.
+Certificate **data** is JSON. What you put in a **QR code** is only the URL of the **static HTML file** in `public/`.
 
-## Flow
+## Static hosting (no app server required)
 
-1. Edit `data/certificates/<code>.json` (page content).
-2. Deploy this app and set `NEXT_PUBLIC_SITE_URL` to your public origin.
-3. QR image at `/api/qr/<code>` encodes `https://your-domain/verify/<code>` — not the JSON.
-4. JSON API at `/api/certificates/<code>` for integrations.
+Upload to any static host (S3, GitHub Pages, Netlify, etc.):
 
-## Local run
+- `public/Mohd-Abdul-Rahman-2026-0jdyhs6829-certificate-verification.html`
+- `public/academy_logo.png`
+
+QR payload example:
+
+`https://your-domain.example/Mohd-Abdul-Rahman-2026-0jdyhs6829-certificate-verification.html`
+
+Set `NEXT_PUBLIC_SITE_URL` when using the optional Next app to generate the QR PNG locally.
+
+## Optional local tooling
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open http://127.0.0.1:43124 for the demo QR and links.
+- HTML: http://127.0.0.1:43124/Mohd-Abdul-Rahman-2026-0jdyhs6829-certificate-verification.html
+- JSON API: http://127.0.0.1:43124/api/certificates/2026-0jdyhs6829 (`verifyUrl` = HTML file URL)
+- QR PNG: http://127.0.0.1:43124/api/qr/2026-0jdyhs6829
+
+`/verify/<code>` redirects to the HTML file for convenience only.
