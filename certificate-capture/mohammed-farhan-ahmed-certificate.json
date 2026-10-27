@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 3,
+  "certificateCode": "2026-0F7A62D389",
+  "status": "verified",
+  "verifyUrl": "https://sahilshaik13.github.io/mohd-certificate-verify/Mohammed-Farhan-Ahmed-2026-0F7A62D389-certificate-verification.html",
+  "qr": {
+    "type": "url",
+    "imageFile": "mohammed-farhan-ahmed-certificate-qr.png",
+    "note": "Phone cameras open https links only; data: URIs are not supported."
+  },
+  "page": {
+    "title": "Certificate Verification",
+    "headline": "Your Certificate has been verified successfully",
+    "holder": {
+      "name": "Mohammed Farhan Ahmed"
+    },
+    "domain": "Java Full Stack Developer",
+    "issueDate": "2026-03-31",
+    "institution": "Nawab Shah Alam Khan College of Engineering and Technology"
+  },
+  "localHtmlFiles": [
+    "Mohammed-Farhan-Ahmed-2026-0F7A62D389-certificate-verification.html"
+  ]
+}

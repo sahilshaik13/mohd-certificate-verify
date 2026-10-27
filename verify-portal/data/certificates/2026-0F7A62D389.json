@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "certificateCode": "2026-0F7A62D389",
+  "htmlFile": "Mohammed-Farhan-Ahmed-2026-0F7A62D389-certificate-verification.html",
+  "status": "verified",
+  "page": {
+    "title": "Certificate Verification",
+    "headline": "Your Certificate has been verified successfully",
+    "logo": {
+      "src": "/academy_logo.png",
+      "alt": "EduSkills Academy"
+    },
+    "holder": {
+      "name": "Mohammed Farhan Ahmed"
+    },
+    "domain": "Java Full Stack Developer",
+    "issueDate": "2026-03-31",
+    "theme": {
+      "pageBackground": "#f4f4f4",
+      "cardBackground": "#ffffff",
+      "headlineColor": "#004ae9",
+      "verifiedIconBackground": "#008000"
+    }
+  },
+  "source": {
+    "template": "https://lmsapi.eduskills.academy/verify/2026-0F7A62D389",
+    "studentId": "STU685943a3703248247679577"
+  }
+}
